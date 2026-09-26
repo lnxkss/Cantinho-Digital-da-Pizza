@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho da Pizza - Cardápio</title>
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+    <header>
+        <h1>Cantinho da Pizza</h1>
+    </header>
+
+    <div class="categorias">
+        <button type="button" class="btnSelecionado" onclick="trocarClasse(this)">TODAS</button>
+        <button type="button" onclick="trocarClasse(this)">SALGADAS</button>
+        <button type="button" onclick="trocarClasse(this)">DOCES</button>
+        <button type="button" onclick="trocarClasse(this)">BEBIDAS</button>
+    </div>
+
+    <div class="sabores" id="sabores">
+    </div>
+
+    <script src="cardapio.js"></script>
+</body>
+</html>
