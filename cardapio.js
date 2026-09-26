@@ -52,7 +52,7 @@ const pizzas = [
     ingredientes: "Molho de tomate, mussarela, tomate em rodelas e orégano"
   },
   {
-    sabor: "Moda do Lia", 
+    sabor: "Moda da Lua", 
     ingredientes: "Molho de tomate, mussarela, frango, bacon, milho, requeijão e orégano"
   },
   {
@@ -88,7 +88,7 @@ const pizzas = [
 const sabores = document.getElementById("sabores")
 pizzas.forEach (pizza => { sabores.innerHTML += `
     <div class="sabor">
-        <img src="pizza.jpg" alt="${pizza.sabor}">
+        <img src="imgs/pizza.webp" alt="${pizza.sabor}">
         <div class="saborIngredientes">
         <h3>${pizza.sabor}<br></h3>
         <p>${pizza.ingredientes}</p>
