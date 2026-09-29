@@ -9,15 +9,29 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    width: 85.3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categorias p {
+    font-size: 20px;
 }
 
 .categorias button {
     border-radius: 5px 5px 0px 0px;
     height: 60px;
     width: 400px;
-    font-size: 20px;
     margin: 0px;
     border-bottom: none;
+}
+
+.categorias button:first-child.btnSelecionado {
+    transform-origin: left bottom;
+}
+
+.categorias button:last-child.btnSelecionado {
+    transform-origin: right bottom;
 }
 
 .categorias button:hover {
@@ -39,6 +53,23 @@ body {
     margin: 0px;
     background-color: #d3d3d3;
     transform: scale(1.1);
+    transform-origin: bottom;
+    transform-origin: left;
+}
+
+.sabores {
+    min-height: 400px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d3d3d3;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-top: none;
+    border-color: #a8a8a8;
+    padding-top: 15px;
 }
 
 .sabor {
@@ -46,6 +77,7 @@ body {
     display: flex;
     border-style: solid;
     border-width: 1px;
+    min-width: 97%;
 }
 
 .sabor:hover {
@@ -55,7 +87,7 @@ body {
     border-width: 1px;
     transition-duration: 0.2s;
     transition: transform 0.2 ease-in-out;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .sabor img {
