@@ -99,7 +99,8 @@ pizzas.forEach (pizza => { sabores.innerHTML += `
     function trocarClasse(btnOnclick) {
     const btnAntigo = document.querySelector(".btnSelecionado");
     if (btnAntigo) {
-        btnAntigo.classList.remove("btnSelecionado");
+      btnAntigo.classList.remove("btnSelecionado")
+      btnAntigo.classList.add("btn");
     }
     btnOnclick.classList.add("btnSelecionado");
 }
