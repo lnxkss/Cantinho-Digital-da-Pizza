@@ -21,6 +21,35 @@ header img {
     margin-top: -15px;
 }
 
+header a {
+    text-decoration: none;
+}
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+.opcsH {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.opcsL {
+    background-color: white;
+    width: 1.5px;
+    height: 25px;
+}
+
+.opcsH:last-child {
+    margin-right: 20px;
+}
+
 @font-face {
   font-family: 'Lemon-Milk'; 
   src: url('LEMONMILK-Medium.otf');
