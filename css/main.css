@@ -38,24 +38,21 @@ header button {
     font-size: 18px;
     margin-top: 17px;
     margin-right: 17px;
-    font-family: Lemon-Milk;
+    font-family: lemon-milk;
 }
 
-.fimDoFooter {
-    font-size: 30px;
-}
-
-.localizacao {
+footer {
     height: 130px;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 0px;
     align-items: center;
 }
 
-.localizacao p {
+footer p {
     margin: 2px;
     font-size: 15px;
 }
