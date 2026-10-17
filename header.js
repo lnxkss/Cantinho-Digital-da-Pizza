@@ -19,5 +19,26 @@ header.innerHTML +=
 
             <div class="opcsL"></div>
 
+            <button type="button" onclick="verHorarios(this)">
             <p>Horários</p>
+            </button>
             </div>`;
+
+function verHorarios(btnOnclick) {
+    const horario = document.querySelector(".horariosD");
+    const fundoP = document.querySelector(".fundoHorarios");
+    horario.classList.add("horariosE");
+    fundoP.style.opacity = '0.5';
+    fundoP.style.height = '100vh'
+    fundoP.style.width = '100%'
+}
+
+function fecharHorarios(btnOnclick) {
+    const horario = document.querySelector(".horariosE");
+    const fundoP = document.querySelector(".fundoHorarios");
+    horario.classList.remove("horariosE")
+    horario.classList.add("horariosD");
+    fundoP.style.opacity = '0';
+    fundoP.style.height = '0'
+    fundoP.style.width = '0'
+}
