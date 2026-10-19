@@ -138,6 +138,7 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza:hover {
@@ -152,8 +153,28 @@ body {
     flex-direction: column;
     align-items: center;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: transform 0.2 ease-in-out box-shadow 0.3s ease;
     transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pizza:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: transform 0.5 ease-in-out;
+}
+
+.pizza1:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: transform 0.5 ease-in-out;
+}
+
+.pizza2:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: transform 0.5 ease-in-out;
 }
 
 .pizza img {
@@ -180,6 +201,7 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza1:hover {
@@ -194,9 +216,12 @@ body {
     flex-direction: column;
     align-items: center;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: transform 0.2 ease-in-out box-shadow 0.3s ease;
     transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
 
 .pizza1 img {
     margin-top: 0px;
@@ -222,6 +247,7 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza2:hover {
@@ -236,8 +262,10 @@ body {
     flex-direction: column;
     align-items: center;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: scale(1.04);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .pizza2 img{
@@ -252,3 +280,31 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
 }
+
+.check {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
+.check1 {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
+.check2 {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
