@@ -1,8 +1,12 @@
 body {
-    background-color: wheat;
+    background-color: #7a0000;
     margin: 0%;
     background-size: 100%;
     overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 @font-face {
@@ -79,7 +83,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: auto;
     align-items: center;
 }
 
@@ -189,6 +193,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
 }
 
 .footerH img {

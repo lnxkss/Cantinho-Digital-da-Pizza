@@ -1,8 +1,31 @@
-body {
-    margin: 0%;
-    background-image: url(../imgs/bg.webp);
-    background-size: 100%;
-    overflow-x: hidden;
+#saborDiv {
+    display: none;
+}
+
+.tituloEPizzas {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6d987;
+    margin-right: auto;
+}
+
+.escolha {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+}
+
+.escolha h1 {
+    color: brown;
+    font-family: lemon-milk;
+    letter-spacing: 5px;
+    text-decoration: underline;
 }
 
 .categorias {
@@ -24,6 +47,8 @@ body {
     width: 400px;
     margin: 0px;
     border-bottom: none;
+    background-color: #f6e9c4;
+    cursor: pointer;
 }
 
 .categorias button:first-child.btnSelecionado {
@@ -34,16 +59,6 @@ body {
     transform-origin: right bottom;
 }
 
-.categorias button:hover {
-    border-radius: 5px 5px 0px 0px;
-    height: 60px;
-    width: 400px;
-    font-size: 20px;
-    margin: 0px;
-    background-color: #d3d3d3;
-    border-bottom: none;
-}
-
 .btnSelecionado {
     border-bottom: none;
     font-weight: bold;
@@ -51,7 +66,7 @@ body {
     height: 60px;
     font-size: 20px;
     margin: 0px;
-    background-color: #d3d3d3;
+    background-color: #f6d987 !important;
     transform: scale(1.1);
     transform-origin: bottom;
     transform-origin: left;
@@ -63,7 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #d3d3d3;
+    background-color: #f6d987;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
@@ -73,20 +88,16 @@ body {
 }
 
 .sabor {
-    background-color: #d3d3d3;
+    background-color: #f6e9c4;
     display: flex;
     border-style: solid;
     border-width: 1px;
     min-width: 97%;
+    cursor: pointer;
 }
 
 .sabor:hover {
-    background-color: #d3d3d3;
-    display: flex;
-    border-style: solid;
-    border-width: 1px;
-    transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: all 0.2s ease-in-out;
     transform: scale(1.04);
 }
 
@@ -118,13 +129,15 @@ body {
 }
 
 .pizzas {
-    width: 100%;
+    width: 80%;
     height: 350px;
-    margin-top: 70px;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
     gap: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .pizza {
@@ -138,22 +151,13 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    transition: all 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza:hover {
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: grey;
-    width: 300px;
-    height: 300px;
-    background-color: #f1f1f1;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f6e9c4;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out box-shadow 0.3s ease;
+    transition: all 0.2 ease-in-out box-shadow 0.3s ease;
     transform: scale(1.05);
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -162,19 +166,19 @@ body {
 .pizza:hover p {
     opacity: 1;
     transition-duration: 0.5s;
-    transition: transform 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out;
 }
 
 .pizza1:hover p {
     opacity: 1;
     transition-duration: 0.5s;
-    transition: transform 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out;
 }
 
 .pizza2:hover p {
     opacity: 1;
     transition-duration: 0.5s;
-    transition: transform 0.5 ease-in-out;
+    transition: all 0.5 ease-in-out;
 }
 
 .pizza img {
@@ -201,22 +205,13 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    transition: all 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza1:hover {
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: grey;
-    width: 300px;
-    height: 300px;
-    background-color: #f1f1f1;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f6e9c4;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out box-shadow 0.3s ease;
+    transition: all 0.2 ease-in-out box-shadow 0.3s ease;
     transform: scale(1.05);
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -247,23 +242,14 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    transition: all 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza2:hover {
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: grey;
-    width: 300px;
-    height: 300px;
-    background-color: #f1f1f1;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f6e9c4;
     transition-duration: 0.2s;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1.04);
+    transition: all 0.2 ease-in-out box-shadow 0.3s ease;
+    transform: scale(1.05);
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }

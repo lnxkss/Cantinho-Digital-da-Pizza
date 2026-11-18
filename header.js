@@ -24,7 +24,7 @@ header.innerHTML +=
             <img src="imgs/logo.webp" alt="Cantinho da Pizza">
         </a> 
         
-        <div class="opcsH">
+        <nav class="opcsH">
 
             <a href="landingP.html">
                 <p>Início</p>
@@ -41,7 +41,7 @@ header.innerHTML +=
             <button type="button" onclick="verHorarios(this)">
             <p>Horários</p>
             </button>
-            </div>`;
+            </nav>`;
 
 const horarioH = document.querySelector(".horariosD")
 horarioH.innerHTML += `<div class="tituloH">
