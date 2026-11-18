@@ -1,8 +1,31 @@
-body {
-    margin: 0%;
-    background-image: url(../imgs/bg.webp);
-    background-size: 100%;
-    overflow-x: hidden;
+#saborDiv {
+    display: none;
+}
+
+.tituloEPizzas {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6d987;
+    margin-right: auto;
+}
+
+.escolha {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+}
+
+.escolha h1 {
+    color: brown;
+    font-family: lemon-milk;
+    letter-spacing: 5px;
+    text-decoration: underline;
 }
 
 .categorias {
@@ -24,6 +47,8 @@ body {
     width: 400px;
     margin: 0px;
     border-bottom: none;
+    background-color: #f6e9c4;
+    cursor: pointer;
 }
 
 .categorias button:first-child.btnSelecionado {
@@ -34,14 +59,6 @@ body {
     transform-origin: right bottom;
 }
 
-.categorias button:hover {
-    cursor: pointer;
-}
-
-.btn {
-    background-color: #d3d3d3;
-}
-
 .btnSelecionado {
     border-bottom: none;
     font-weight: bold;
@@ -49,7 +66,7 @@ body {
     height: 60px;
     font-size: 20px;
     margin: 0px;
-    background-color: #eeeeee;
+    background-color: #f6d987 !important;
     transform: scale(1.1);
     transform-origin: bottom;
     transform-origin: left;
@@ -61,7 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eeeeee;
+    background-color: #f6d987;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
@@ -72,16 +89,16 @@ body {
 }
 
 .sabor {
-    background-color: #eeeeee;
+    background-color: #f6e9c4;
     display: flex;
     border-style: solid;
     border-width: 1px;
     min-width: 97%;
+    cursor: pointer;
 }
 
 .sabor:hover {
-    transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: all 0.2s ease-in-out;
     transform: scale(1.04);
 }
 
@@ -113,13 +130,15 @@ body {
 }
 
 .pizzas {
-    width: 100%;
+    width: 80%;
     height: 350px;
-    margin-top: 70px;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
     gap: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .pizza {
@@ -133,14 +152,34 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.747);
+    transition: all 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza:hover {
+    background-color: #f6e9c4;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: all 0.2 ease-in-out box-shadow 0.3s ease;
     transform: scale(1.05);
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pizza:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: all 0.5 ease-in-out;
+}
+
+.pizza1:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: all 0.5 ease-in-out;
+}
+
+.pizza2:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: all 0.5 ease-in-out;
 }
 
 .pizza img {
@@ -167,15 +206,18 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.747);
+    transition: all 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza1:hover {
+    background-color: #f6e9c4;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
+    transition: all 0.2 ease-in-out box-shadow 0.3s ease;
     transform: scale(1.05);
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
 
 .pizza1 img {
     margin-top: 0px;
@@ -201,14 +243,16 @@ body {
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.747);
+    transition: all 0.2s ease-in-out, box-shadow 0.3s ease;
 }
 
 .pizza2:hover {
+    background-color: #f6e9c4;
     transition-duration: 0.2s;
-    transition: transform 0.2 ease-in-out;
-    transform: scale(1.04);
+    transition: all 0.2 ease-in-out box-shadow 0.3s ease;
+    transform: scale(1.05);
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .pizza2 img{
@@ -223,3 +267,31 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
 }
+
+.check {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
+.check1 {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
+.check2 {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+

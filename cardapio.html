@@ -6,40 +6,46 @@
     <title>Cantinho da Pizza - Cardápio</title>
     <link rel="stylesheet" href="css/cardapio.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3132/3132693.png">
 </head>
 <body>
-    <header>
-        <a href="landingP.html">
-            <img src="imgs/logo.webp" alt="Cantinho da Pizza">
-        </a>
-    </header>
+    <header class="header"></header></div>
+    <div class="fundoHorarios" onclick="fecharHorarios(this)"></div>
+    <div class="horariosD" onclick="fecharHorarios(this)"></div>
+
+    <div class="tituloEPizzas">
+        <div class="escolha">
+        <h1>Escolha um tamanho</h1>
+        </div>
     <div class="pizzas">
 
         <div class="pizza">
 
-            <img src="imgs/pizza-media.webp" alt="Cantinho da Pizza">
-                <p class="tamanhoMedia"><strong>MÉDIA:</strong> 6 PEDAÇOS</p>
+            <p class="check">✔</p>
+                <img src="imgs/pizza-media.webp" alt="Cantinho da Pizza">
+                    <p class="tamanhoMedia"><strong>MÉDIA:</strong> 6 PEDAÇOS</p>
 
         </div>
 
         <div class="pizza1">
-            <img src="imgs/pizza-grande.webp" alt="Cantinho da Pizza">
-                <p class="tamanhoGrande"><strong>GRANDE:</strong> 8 PEDAÇOS</p>
+            
+            <p class="check1">✔</p>
+                <img src="imgs/pizza-grande.webp" alt="Cantinho da Pizza">
+                    <p class="tamanhoGrande"><strong>GRANDE:</strong> 8 PEDAÇOS</p>
 
         </div>
 
         <div class="pizza2">
 
-           <img src="imgs/pizza-gigante.webp" alt="Cantinho da Pizza">
-                <p class="tamanhoGigante"><strong>GIGANTE:</strong> 12 PEDAÇOS</p>
+            <p class="check2">✔</p>
+                <img src="imgs/pizza-gigante.webp" alt="Cantinho da Pizza">
+                    <p class="tamanhoGigante"><strong>GIGANTE:</strong> 12 PEDAÇOS</p>
 
         </div>
-
-
-
-
+    </div>
     </div>
 
+    <div id="saborDiv">
     <div class="categorias">
         <button type="button" class="btnSelecionado" onclick="trocarClasse(this)"><p>TODAS</p></button>
         <button type="button" class="btn" onclick="trocarClasse(this)"><p>SALGADAS</p></button>
@@ -48,6 +54,7 @@
     </div>
 
     <div class="sabores" id="sabores">
+    </div>
     </div>
 
     <footer class="rodape">
@@ -58,5 +65,6 @@
 </footer>
 
     <script src="cardapio.js"></script>
+    <script src="header.js"></script>
 </body>
 </html>

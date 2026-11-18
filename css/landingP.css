@@ -12,6 +12,7 @@
 }
 .logo-rodape img {
     width: 250px;
+    pointer-events: none;
 }
 
 
@@ -52,6 +53,7 @@
     margin: 0;
     object-fit: cover;
     flex-shrink: 0;
+    pointer-events: none;
 }
 
 .slides {
@@ -132,6 +134,7 @@
 .comprar img {
     width: 130px;
     margin-bottom: 20px;
+    pointer-events: none;
 }
 
 .comprar button {
@@ -141,7 +144,7 @@
     background-color: #af1111;
     border-color: #ad3838;
     color: #ffffff;
-    font-size: 26px;
+    font-size: 25px;
     margin-top: 17px;
     margin-right: 17px;
     font-family: lemon-milk;
