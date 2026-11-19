@@ -104,3 +104,34 @@ pizzas.forEach (pizza => { sabores.innerHTML += `
     }
     btnOnclick.classList.add("btnSelecionado");
 }
+
+function revelarSabores() {
+  const saborDiv = document.getElementById("saborDiv")
+  const pizzasSelecionadas = document.querySelectorAll(".pizzaSelecionada")
+  if (pizzasSelecionadas.length == 0) {
+    saborDiv.style.display = "block"
+  } else {
+    saborDiv.style.display = "none"
+  }
+}
+
+const pizzasDiv = document.querySelectorAll(".pizza")
+pizzasDiv.forEach(div => {
+  div.addEventListener("click", function() {
+    const pizzaSelecionada = document.querySelector(".pizzaSelecionada")
+    if (pizzaSelecionada !== null) {
+      pizzaSelecionada.classList.remove("pizzaSelecionada")
+      pizzaSelecionada.classList.add("pizza")
+
+      revelarSabores()
+
+      div.classList.remove("pizza")
+      div.classList.add("pizzaSelecionada")
+    } else {
+      revelarSabores()
+
+      div.classList.remove("pizza")
+      div.classList.add("pizzaSelecionada")
+    }
+  })  
+});
