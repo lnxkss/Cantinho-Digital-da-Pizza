@@ -18,33 +18,134 @@ function fecharHorarios(btnOnclick) {
 }
 
 
-const header = document.querySelector(".header")
-header.innerHTML +=
-        `<a href="landingP.html">
-            <img src="imgs/logo.webp" alt="Cantinho da Pizza">
-        </a> 
-        
-        <nav class="opcsH">
+const header = document.querySelector(".header");
 
-            <a href="landingP.html">
-                <p>Início</p>
-            </a>
-            
-            <div class="opcsL"></div>
+header.innerHTML += `
+    <a href="landingP.html">
+        <img src="imgs/logo.webp" alt="Cantinho da Pizza">
+    </a>
 
-            <a href="cardapio.html">
-                <p>Pedir</p>
-            </a>
+    <nav class="opcsH">
 
-            <div class="opcsL"></div>
+        <a href="landingP.html">
+            <p>Início</p>
+        </a>
 
-            <button type="button" onclick="verHorarios(this)">
+        <div class="opcsL"></div>
+
+        <a href="cardapio.html">
+            <p>Pedir</p>
+        </a>
+
+        <div class="opcsL"></div>
+
+        <button type="button" onclick="verHorarios(this)">
             <p>Horários</p>
-            </button>
-            </nav>`;
+        </button>
+
+        <div class="opcsL"></div>
+
+        <button type="button" onclick="abrirEndereco()">
+            <p>Endereço</p>
+        </button>
+
+    </nav>
+`;
 
 const horarioH = document.querySelector(".horariosD")
-horarioH.innerHTML += `<div class="tituloH">
+horarioH.innerHTML += document.body.insertAdjacentHTML("beforeend", `
+    <div class="fundoEndereco" id="fundoEndereco">
+
+        <div class="modalEndereco">
+
+            <div class="tituloEndereco">
+                <h2>ENDEREÇO DE ENTREGA</h2>
+
+                <button type="button" onclick="fecharEndereco()">
+                    &times;
+                </button>
+            </div>
+
+            <form id="formEndereco">
+
+                <div class="camposEndereco">
+
+                    <div class="campoEndereco">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep"
+                            placeholder="00000-000" required>
+                    </div>
+
+                    <div class="campoEndereco">
+                        <label for="rua">Rua / Avenida</label>
+                        <input type="text" id="rua"
+                            placeholder="Nome da rua" required>
+                    </div>
+
+                    <div class="campoEndereco">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero"
+                            placeholder="Número da residência" required>
+                    </div>
+
+                    <div class="campoEndereco">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro"
+                            placeholder="Seu bairro" required>
+                    </div>
+
+                    <div class="campoEndereco">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" id="complemento"
+                            placeholder="Apartamento, casa...">
+                    </div>
+
+                    <div class="campoEndereco">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade"
+                            placeholder="Sua cidade" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="confirmarEndereco">
+                    CONFIRMAR ENDEREÇO
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+`);
+
+// Abrir modal
+function abrirEndereco() {
+    document.getElementById("fundoEndereco").style.display = "flex";
+}
+
+// Fechar modal
+function fecharEndereco() {
+    document.getElementById("fundoEndereco").style.display = "none";
+}
+
+// Fechar clicando fora
+document.getElementById("fundoEndereco").addEventListener("click", function(event) {
+    if (event.target === this) {
+        fecharEndereco();
+    }
+});
+
+// Confirmar endereço
+document.getElementById("formEndereco").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    alert("Endereço preenchido com sucesso!");
+
+    fecharEndereco();
+});
+
+    `<div class="tituloH">
             <p>Horários</p>
         </div>
 
