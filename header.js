@@ -53,7 +53,31 @@ header.innerHTML += `
 `;
 
 const horarioH = document.querySelector(".horariosD")
-horarioH.innerHTML += document.body.insertAdjacentHTML("beforeend", `
+horarioH.innerHTML += `<div class="tituloH">
+            <p>Horários</p>
+        </div>
+
+        <div class="info">
+            <div class="dias">
+            <p><strong>Segunda-feira:</strong> 19:00 às 23:15</p>
+            <p><strong>Terça-feira:</strong> 19:00 às 23:15</p>
+            <p><strong>Quarta-feira:</strong> 19:00 às 23:15</p>
+            <p><strong>Quinta-feira:</strong> 19:00 às 23:15</p>
+            <p><strong>Sexta-feira:</strong> 19:00 às 23:15</p>
+            <p><strong>Sábado:</strong> 19:00 às 23:40</p>
+            <p><strong>Domingo:</strong> 19:00 às 23:15</p>
+            </div>
+            <div class="relogio">
+                <img src="imgs/horario.webp" alt="">
+            </div>
+        </div>
+        <div class="footerH">
+            <img src="imgs/footerHorario.webp" alt="">
+            
+        </div>`;
+
+
+document.body.insertAdjacentHTML("beforeend", `
     <div class="fundoEndereco" id="fundoEndereco">
 
         <div class="modalEndereco">
@@ -73,9 +97,17 @@ horarioH.innerHTML += document.body.insertAdjacentHTML("beforeend", `
                     <div class="campoEndereco">
                         <label for="cep">CEP</label>
                         <input type="text" id="cep"
-                            placeholder="00000-000" required>
+                            placeholder="00000-000"
+                            maxlength="9" required>
                     </div>
 
+                    <div class="campoEndereco">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone"
+                            placeholder="(00) 00000-0000"
+                            maxlength="15" required>
+                    </div>
+                    
                     <div class="campoEndereco">
                         <label for="rua">Rua / Avenida</label>
                         <input type="text" id="rua"
@@ -100,12 +132,6 @@ horarioH.innerHTML += document.body.insertAdjacentHTML("beforeend", `
                             placeholder="Apartamento, casa...">
                     </div>
 
-                    <div class="campoEndereco">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade"
-                            placeholder="Sua cidade" required>
-                    </div>
-
                 </div>
 
                 <button type="submit" class="confirmarEndereco">
@@ -119,51 +145,67 @@ horarioH.innerHTML += document.body.insertAdjacentHTML("beforeend", `
     </div>
 `);
 
-// Abrir modal
+const telefone = document.getElementById("telefone");
+
+telefone.addEventListener("input", function() {
+
+    let numero = telefone.value.replace(/\D/g, "");
+
+    numero = numero.substring(0, 11);
+
+    if (numero.length > 2) {
+        numero = numero.replace(/^(\d{2})(\d)/, "($1) $2");
+    }
+
+    if (numero.length > 10) {
+        numero = numero.replace(/(\d{5})(\d{4})$/, "$1-$2");
+    } 
+    else if (numero.length > 9) {
+        numero = numero.replace(/(\d{4})(\d{4})$/, "$1-$2");
+    }
+
+    telefone.value = numero;
+
+});
+
+const cep = document.getElementById("cep");
+
+cep.addEventListener("input", function() {
+
+    let numero = cep.value.replace(/\D/g, "");
+
+    numero = numero.substring(0, 8);
+
+    if (numero.length > 5) {
+        numero = numero.replace(/^(\d{5})(\d)/, "$1-$2");
+    }
+
+    cep.value = numero;
+
+});
+
+const numero = document.getElementById("numero");
+
+numero.addEventListener("input", function() {
+    numero.value = numero.value.replace(/\D/g, "");
+});
+
 function abrirEndereco() {
-    document.getElementById("fundoEndereco").style.display = "flex";
+    const modal = document.getElementById("fundoEndereco");
+
+    modal.style.display = "flex";
 }
 
-// Fechar modal
 function fecharEndereco() {
-    document.getElementById("fundoEndereco").style.display = "none";
+    const modal = document.getElementById("fundoEndereco");
+
+    modal.style.display = "none";
 }
 
-// Fechar clicando fora
 document.getElementById("fundoEndereco").addEventListener("click", function(event) {
+
     if (event.target === this) {
         fecharEndereco();
     }
+
 });
-
-// Confirmar endereço
-document.getElementById("formEndereco").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    alert("Endereço preenchido com sucesso!");
-
-    fecharEndereco();
-});
-
-    `<div class="tituloH">
-            <p>Horários</p>
-        </div>
-
-        <div class="info">
-            <div class="dias">
-            <p><strong>Segunda-feira:</strong> 19:00 às 23:15</p>
-            <p><strong>Terça-feira:</strong> 19:00 às 23:15</p>
-            <p><strong>Quarta-feira:</strong> 19:00 às 23:15</p>
-            <p><strong>Quinta-feira:</strong> 19:00 às 23:15</p>
-            <p><strong>Sexta-feira:</strong> 19:00 às 23:15</p>
-            <p><strong>Sábado:</strong> 19:00 às 23:40</p>
-            <p><strong>Domingo:</strong> 19:00 às 23:15</p>
-            </div>
-            <div class="relogio">
-                <img src="imgs/horario.webp" alt="">
-            </div>
-        </div>
-        <div class="footerH">
-            <img src="imgs/footerHorario.webp" alt="">
-            
-        </div>`
