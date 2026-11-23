@@ -1,92 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento - Cantinho da Pizza</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Pagamento</title>
     <link rel="stylesheet" href="css/pagamento.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        
-        <a href="menu.html">
-            <img src="imgs/logo.webp" alt="Cantinho da Pizza">
-        </a>
+    
+    <header class="header"></header>
 
-        <a href="cardapio.html">
-            <button type="button">Cardápio</button>
-        </a>   
-    </header>
+      <div class="opcoes">
 
-    <h1 class="titulo">Finalizar Compra</h1>
+    <main class="retanguloBranco">
+        <p class="pixp">PIX</p>
+        <img class="piximg" src="imgs/iconePix.webp" alt="">
+         <input type="radio" name="pagamento" value="1">
+    </main>
 
-    <div class="telaPagam">
-        
+    <main class="retanguloBranco">
+        <p class="cartaoCp">Cartão de Crédito</p>
+        <img class="cartaoCimg" src="imgs/iconeCartao.webp" alt="">
+         <input type="radio" name="pagamento" value="2">
+    </main>
 
-        <div class="mP">
+    <main class="retanguloBranco">
+        <p class="cartaoDp">Cartão de Débito</p>
+        <img class="cartaoDimg" src="imgs/iconeCartao.webp" alt="">
+         <input type="radio" name="pagamento" value="3">
+    </main>
 
-            <div class="espaco">
-            <h1>PIX</h1>
-            <img src="imgs/iconePix.webp" alt="rolon">
-                </div>
-
-                <div>
-                </label>
-              <input type="radio" name="opcao"> 
-                </label>
-             </div>
-
-                </div>
-
-        <div class="mP">
-
-            <div class="espaco">
-            <h1>Cartão Crédito</h1>
-            <img src="imgs/iconeCartao.webp" alt="">
-            </div>
-
-            <div>
-            <label>
-            <input type="radio" name="opcao" >
-         </label> 
-         </div>
-        </div>
+    <main class="retanguloBranco">
+        <p class="dinheiroP">Dinehiro</p>
+        <img class="dinheiroImg" src="imgs/iconeDinheiro.webp" alt="">
+         <input type="radio" name="pagamento" value="4">
+    </main>
 
 
-        <div class="mP">
-
-            <div class="espaco">
-            <h1>Cartão Débito</h1>
-            <img src="imgs/iconeCartao.webp" alt="">
-            </div>
-
-            <div>
-             <label>
-          <input type="radio" name="opcao" > 
-          </label>
-          </div>
-
-        </div>
-
-        <div class="mP">
-         <div class="espaco">
-            <h1>Dinheiro</h1>
-            <img src="imgs/iconeDinheiro.webp" alt="">
-            </div>
-
-            <div class="pagamento">
-            </div>
-
-            <div>
-             <label>
-    <input type="radio" name="opcao" value="4"> 
-  </label>
-        </div>
-        
     </div>
 
 
 
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="header.js"></script>`
+
+    </body>
 </html>

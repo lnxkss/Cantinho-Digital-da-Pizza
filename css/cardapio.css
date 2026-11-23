@@ -8,7 +8,7 @@ body {
 .categorias {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 30px;
     width: 85.3%;
     margin-left: auto;
     margin-right: auto;
@@ -116,3 +116,195 @@ body {
     text-align: center;
     margin-top: -20px;
 }
+
+.pizzas {
+    width: 100%;
+    height: 350px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.pizza {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: grey;
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+.pizza:hover {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+    width: 300px;
+    height: 300px;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition: transform 0.2 ease-in-out box-shadow 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pizza:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: transform 0.5 ease-in-out;
+}
+
+.pizza1:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: transform 0.5 ease-in-out;
+}
+
+.pizza2:hover p {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: transform 0.5 ease-in-out;
+}
+
+.pizza img {
+    margin-top: 20px;
+    margin-bottom: -15px;
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.tamanhoMedia{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.pizza1 {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: grey;
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+.pizza1:hover {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+    width: 300px;
+    height: 300px;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition: transform 0.2 ease-in-out box-shadow 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+.pizza1 img {
+    margin-top: 0px;
+    margin-bottom: -35px;
+    width: 265px;
+    height: 265px;
+    object-fit: cover;
+}
+
+.tamanhoGrande{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.pizza2 {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: grey;
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+.pizza2:hover {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+    width: 300px;
+    height: 300px;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.04);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pizza2 img{
+    margin-top: 0px;
+    margin-bottom: -40px;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.tamanhoGigante{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.check {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
+.check1 {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
+.check2 {
+    position: fixed;
+    font-size: 40px;
+    color: #606060;
+    margin-bottom: 280px;
+    margin-left: 240px;
+    opacity: 0;
+}
+
