@@ -1,6 +1,3 @@
-
-/* CONFIGURAÇÕES GERAIS */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +13,6 @@ body {
     background-color: #790000;
     color: #fff;
 }
-
-/* CABEÇALHO */
 
 .cabecalho {
     height: 90px;
@@ -62,8 +57,6 @@ body {
     border-radius: 5px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.377);
 }
-
-/* CARRINHO */
 
 .carrinho {
     padding: 10px 3% 30px;
@@ -159,8 +152,6 @@ body {
     font-size: 17px;
 }
 
-/* TÍTULO DA FINALIZAÇÃO */
-
 .titulo-finalizacao {
     display: flex;
     justify-content: center;
@@ -174,8 +165,6 @@ body {
     height: auto;
     object-fit: contain;
 }
-
-/* QUADRO BEGE */
 
 .finalizacao {
     margin: 0 auto 25px;
@@ -193,8 +182,6 @@ body {
     overflow: hidden;
 }
 
-/* INFORMAÇÕES DO PEDIDO */
-
 .dados-pedido {
     width: 40%;
     min-width: 0;
@@ -204,8 +191,6 @@ body {
     gap: 14px;
     flex-shrink: 0;
 }
-
-/* OPÇÕES DE ENTREGA */
 
 .opcoes-entrega {
     display: flex;
@@ -229,8 +214,6 @@ body {
     width: 15px;
     height: 15px;
 }
-
-/* ENDEREÇO E ESTABELECIMENTO */
 
 .endereco,
 .estabelecimento {
@@ -256,8 +239,6 @@ body {
 .estabelecimento p {
     font-size: 12px;
 }
-
-/* CUPOM DE DESCONTO */
 
 .cupom {
     display: flex;
@@ -296,8 +277,6 @@ body {
     cursor: pointer;
 }
 
-/* RESUMO DA COMPRA */
-
 .resumo {
     display: flex;
     flex-direction: column;
@@ -320,8 +299,6 @@ body {
     font-weight: bold;
     color: #222;
 }
-
-/* BOTÕES */
 
 .botao-mais,
 .botao-finalizar {
@@ -347,8 +324,6 @@ body {
     border: 1px solid #d1a000;
 }
 
-/* ILUSTRAÇÃO DO PIZZAIOLO */
-
 .ilustracao {
     flex: 1;
     min-width: 0;
@@ -365,6 +340,4 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-   
-   
 }
