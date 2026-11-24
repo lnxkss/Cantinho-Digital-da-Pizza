@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho | Cantinho da Pizza</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <nav class="menu">
+            <a href="#">NOSSA CASA</a>
+            <a href="#">CARDÁPIO</a>
+        </nav>
+
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Cantinho da Pizza">
+        </div>
+
+        <a href="#" class="botao-pedido">🛵 PEÇA AGORA</a>
+
+    </header>
+
+    <main>
+
+        <section class="carrinho">
+
+            <div class="titulo-carrinho">
+                <h2>CARRINHO</h2>
+                <a href="#">LIMPAR CARRINHO</a>
+            </div>
+
+            <div class="lista-produtos">
+
+                <article class="produto">
+                    <div class="imagem-pizza">🍕</div>
+
+                    <div class="informacoes">
+                        <h3>ALHO E ÓLEO</h3>
+                        <p>Molho de tomate, mussarela, alho frito e orégano.</p>
+                    </div>
+
+                    <div class="quantidade">
+                        <button type="button">−</button>
+                        <p>1</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="imagem-pizza">🍕</div>
+
+                    <div class="informacoes">
+                        <h3>ALHO E ÓLEO</h3>
+                        <p>Molho de tomate, mussarela, alho frito e orégano.</p>
+                    </div>
+
+                    <div class="quantidade">
+                        <button type="button">−</button>
+                        <p>1</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="imagem-pizza">🍕</div>
+
+                    <div class="informacoes">
+                        <h3>ALHO E ÓLEO</h3>
+                        <p>Molho de tomate, mussarela, alho frito e orégano.</p>
+                    </div>
+
+                    <div class="quantidade">
+                        <button type="button">−</button>
+                        <p>1</p>
+                        <button type="button">+</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="titulo-finalizacao">
+                <img src="imgs/finalizar pedido.png" alt="Finalize seu pedido">
+            </div>
+
+        </section>
+
+        <section class="finalizacao" id="finalizacao">
+
+            <div class="dados-pedido">
+
+                <div class="opcoes-entrega">
+
+                    <label>
+                        <input type="radio" name="entrega" checked>
+                        <strong>Delivery</strong>
+                    </label>
+
+                    <div class="endereco">
+                        <h3>ENDEREÇO</h3>
+                        <a href="#">ADICIONAR ENDEREÇO</a>
+                    </div>
+
+                    <label>
+                        <input type="radio" name="entrega">
+                        <strong>Retirar no estabelecimento</strong>
+                    </label>
+
+                    <div class="estabelecimento">
+                        <h3>CANTINHO DA PIZZA</h3>
+                        <p>Endereço:</p>
+                        <p>Rua Orminda Freitas Cezar, 291 - Bairro São Sebastião</p>
+                    </div>
+
+                </div>
+
+                <div class="cupom">
+
+                    <label for="codigoCupom">Cupom de Desconto</label>
+
+                    <div class="campo-cupom">
+                        <input
+                            type="text"
+                            id="codigoCupom"
+                            placeholder="Digite seu cupom"
+                        >
+
+                        <button type="button">APLICAR</button>
+                    </div>
+
+                </div>
+
+                <div class="resumo">
+
+                    <div class="linha-resumo">
+                        <p>Subtotal</p>
+                        <p>R$ 89,70</p>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <p>Taxa de Entrega</p>
+                        <p>R$ 5,00</p>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <p>Desconto</p>
+                        <p>R$ 0,00</p>
+                    </div>
+
+                    <div class="total">
+                        <h3>Total</h3>
+                        <h3>R$ 94,70</h3>
+                    </div>
+
+                </div>
+
+                <button class="botao-mais" type="button">
+                    ADICIONAR MAIS ITENS
+                </button>
+
+                <button class="botao-finalizar" type="button">
+                    FINALIZAR COMPRA
+                </button>
+
+            </div>
+
+            <div class="ilustracao">
+                <img src="imgs/pizzaiolo.png" alt="Pizzaiolo preparando pizza">
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
