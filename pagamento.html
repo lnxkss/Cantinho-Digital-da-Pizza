@@ -1,89 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento - Cantinho da Pizza</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Cantinho da Pizza - Pagamento</title>
     <link rel="stylesheet" href="css/pagamento.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <header>
-        
-        <a href="menu.html">
-            <img src="imgs/logo.webp" alt="Cantinho da Pizza">
-        </a>
-
-        <a href="cardapio.html">
-            <button type="button">Cardápio</button>
-        </a>   
-    </header>
-
-    <h1 class="titulo">Finalizar Compra</h1>
-
-    <div class="telaPagam">
-        
-
-        <div class="mP">
-
-            <div class="espaco">
-            <h1>PIX</h1>
-            <img src="imgs/iconePix.webp" alt="rolon">
+    <header class="header"></header>
+    <main class="conteudo">
+        <div class="area-entregador"> <img src="imgs/Entregador-de-Pizza-com-Caixa-Fumegante.webp"
+                alt="Entregador com caixa de pizza"> </div>
+        <section class="pagamento">
+            <h1>FINALIZAR COMPRA</h1>
+            <div class="opcoes">
+                <div class="grupo-pagamento"> <label class="opcao"> <span>PIX</span> <img src="imgs/iconePix.webp"
+                            alt="Pix"> <input type="radio" name="pagamento" value="Pix"> </label>
+                    <div class="detalhes" id="detalhes-pix">
+                        <h3>QR CODE PIX</h3> <img src="" alt="QR Code Pix" class="qrcode">
+                        <p>Escaneie o QR Code para realizar o pagamento.</p>
+                    </div>
                 </div>
-
-                <div>
-                </label>
-              <input type="radio" name="opcao"> 
-                </label>
-             </div>
-
+                <div class="grupo-pagamento"> <label class="opcao"> <span>CARTÃO DE CRÉDITO</span> <img
+                            src="imgs/iconeCartao.webp" alt="Cartão"> <input type="radio" name="pagamento"
+                            value="Cartão de crédito"> </label>
+                    <div class="detalhes detalhes-cartao">
+                        <h3>Pagamento na entrega</h3>
+                        <p>O pagamento será realizado na entrega do pedido, utilizando cartão de crédito.</p>
+                    </div>
                 </div>
-
-        <div class="mP">
-
-            <div class="espaco">
-            <h1>Cartão Crédito</h1>
-            <img src="imgs/iconeCartao.webp" alt="">
-            </div>
-
-            <div>
-            <label>
-            <input type="radio" name="opcao" >
-         </label> 
-         </div>
-        </div>
-
-
-        <div class="mP">
-
-            <div class="espaco">
-            <h1>Cartão Débito</h1>
-            <img src="imgs/iconeCartao.webp" alt="">
-            </div>
-
-            <div>
-             <label>
-          <input type="radio" name="opcao" > 
-          </label>
-          </div>
-
-        </div>
-
-        <div class="mP">
-         <div class="espaco">
-            <h1>Dinheiro</h1>
-            <img src="imgs/iconeDinheiro.webp" alt="">
-            </div>
-
-            <div>
-             <label>
-    <input type="radio" name="opcao" value="4"> 
-  </label>
-        </div>
-        
-    </div>
-
-
-
+                <div class="grupo-pagamento"> <label class="opcao"> <span>CARTÃO DE DÉBITO</span> <img
+                            src="imgs/iconeCartao.webp" alt="Cartão"> <input type="radio" name="pagamento"
+                            value="Cartão de débito"> </label>
+                    <div class="detalhes detalhes-cartao">
+                        <h3>Pagamento na entrega</h3>
+                        <p>O pagamento será realizado na entrega do pedido, utilizando cartão de débito.</p>
+                    </div>
+                </div>
+                <div class="grupo-pagamento"> <label class="opcao"> <span>DINHEIRO</span> <img
+                            src="imgs/iconeDinheiro.webp" alt="Dinheiro"> <input type="radio" name="pagamento"
+                            value="Dinheiro"> </label>
+                    <div class="detalhes dinheiro" id="detalhes-dinheiro">
+                        <h3>Pagar na Entrega</h3>
+                        <hr>
+                        <h4>Vai precisar de troco?</h4>
+                        <p> Digite o valor que você vai pagar em dinheiro, para que a pessoa que for entregar seu pedido
+                            leve o troco correto. </p>
+                        <div class="troco"> <span>R$</span> <input type="number" placeholder="0,00" min="0" step="0.01">
+                        </div>
+                        <p class="lembrete"> Lembre-se: quando receber seu pedido, é importante que você confira o valor
+                            do seu troco. </p> <button class="confirmar" onclick="confirmarPagamento('Dinheiro')">
+                            CONFIRMAR </button>
+                    </div>
+                </div>
+            </div> <button class="revisar" onclick="revisarPedido()"> REVISAR PEDIDO </button>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="pagamento.js"></script>
+    <script src="header.js"></script>
 </body>
+
 </html>
