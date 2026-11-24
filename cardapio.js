@@ -117,7 +117,7 @@ const sabores = document.getElementById("sabores");
 pizzas.forEach(pizza => {
     sabores.innerHTML += `
         <div class="sabor" id="${pizza.id}">
-            <img src="imgs/pizza.webp" alt="${pizza.sabor}">
+            <img src="pizza.webp" alt="${pizza.sabor}">
             <div class="saborIngredientes">
                 <h3>${pizza.sabor}<br></h3>
                 <p>${pizza.ingredientes}</p>
