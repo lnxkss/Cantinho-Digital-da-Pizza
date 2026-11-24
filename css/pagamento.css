@@ -1,71 +1,400 @@
-.opcoes {
 
-    gap: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(110deg, #850000, #a00000);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
 
-.retanguloBranco {
-    width: 50%;
-    height: 5rem;
-    margin-left: 25%;
-    margin-top: 5%;
-    border-radius: 20px;
-    justify-content: center;
+.cabecalho {
+    height: 117px;
+    background: #940000;
+    border-bottom: 2px solid #a90000;
+
     display: flex;
     align-items: center;
-    background-color: white;
-    gap: px;
+    justify-content: space-between;
+
+    padding: 0 3.2%;
+    position: relative;
 }
 
-.pixp {
-    font-size: 300%;
-    margin-right: 60%;
+.menu {
+    display: flex;
+    gap: 80px;
 }
 
-.piximg {
-    width: 10%;
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
 }
 
-.cartaoCp {
-    font-size: 230%;
-    margin-right: 35%;
+.logo {
+    width: 290px;
+    height: 115px;
+    object-fit: contain;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.cartaoCimg {
+.pedido {
+    background: #ffc400;
+    border: none;
+    border-radius: 10px;
+    padding: 19px 25px;
 
-    width: 15%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #7d0000;
+
+    cursor: pointer;
 }
 
-.cartaoDp {
-
-    font-size: 230%;
-    margin-right: 35%
+.pedido span {
+    margin-right: 10px;
 }
 
-.cartaoDimg {
 
-    width: 15%;
 
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1650px;
+    margin: auto;
+    padding: 45px 4%;
+    gap: 40px;
+
+    min-height: calc(100vh - 187px);
 }
 
-.dinheiroP {
 
-    font-size: 230%;
-    margin-right: 55%
+
+.area-entregador {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.dinheiroImg {
-
-    width: 10%;
+.area-entregador img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
 }
 
-.retanguloBranco input {
-    width: 30px;
-    height: 30px;
+
+.pagamento {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.pagamento h1 {
+    align-self: flex-start;
+
+    background: #c40000;
+    color: white;
+
+    font-size: 26px;
+    font-style: italic;
+    padding: 12px 20px;
+
+    border-radius: 7px;
+    border-bottom: 4px solid #ffc400;
+
+    margin-bottom: 24px;
+}
+
+
+
+.opcoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.opcao {
+    width: 100%;
+    height: 90px;
+
+    background: #fff;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 35px;
+    gap: 30px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.opcao:hover {
+    transform: scale(1.01);
+    background: #fff8e6;
+}
+
+.opcao span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #080808;
+    flex: 1;
+}
+
+.opcao img {
+    width: 65px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
+
+.opcao input {
+    appearance: none;
+    width: 39px;
+    height: 39px;
+
+    border: 4px solid #ffb900;
     border-radius: 50%;
-    margin-left: 5px;
 
-    
-   
+    cursor: pointer;
+    margin-left: 35px;
+    flex-shrink: 0;
 }
+
+.opcao input:checked {
+    background: #ffb900;
+    border: 9px solid white;
+    outline: 4px solid #ffb900;
+}
+
+
+
+.revisar {
+    background: #ffc400;
+    color: black;
+
+    border: none;
+    border-radius: 10px;
+
+    width: 365px;
+    height: 70px;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+
+    cursor: pointer;
+    margin-top: 70px;
+
+    transition: 0.2s;
+}
+
+.revisar:hover {
+    background: #ffdb43;
+    transform: scale(1.03);
+}
+
+
+
+footer {
+    width: 100%;
+    height: 23px;
+    background: #ffc400;
+}
+
+
+
+.grupo-pagamento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.detalhes {
+    display: none;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    margin-top: -5px;
+    animation: aparecer 0.3s ease;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.grupo-pagamento.ativo .detalhes {
+    display: block;
+}
+
+.grupo-pagamento.ativo .opcao {
+    border-radius: 10px 10px 0 0;
+}
+
+
+.grupo-pagamento.ativo .detalhes::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ffc400;
+    margin-bottom: 15px;
+}
+
+
+.formulario {
+    padding: 20px 25px 35px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    gap: 5px;
+}
+
+.campo label {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.campo input {
+    width: 250px;
+    height: 27px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.linha-campos {
+    display: flex;
+    gap: 20px;
+}
+
+.linha-campos input {
+    width: 75px;
+}
+
+
+.confirmar {
+    background: #ffc400;
+    border: 1px solid #9b7100;
+    border-radius: 4px;
+
+    width: 130px;
+    height: 35px;
+
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    display: block;
+    margin: 15px auto -25px;
+}
+
+.confirmar:hover {
+    background: #ffda43;
+}
+
+/* PIX */
+
+#detalhes-pix {
+    text-align: center;
+}
+
+#detalhes-pix h3 {
+    margin-bottom: 15px;
+}
+
+.qrcode {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+#detalhes-pix p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* DINHEIRO */
+
+.dinheiro {
+    text-align: center;
+}
+
+.dinheiro h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.dinheiro hr {
+    border: none;
+    border-top: 1px solid #ffc400;
+    margin-bottom: 15px;
+}
+
+.dinheiro h4 {
+    margin-bottom: 12px;
+}
+
+.dinheiro p {
+    font-size: 11px;
+    max-width: 280px;
+    margin: 0 auto 12px;
+}
+
+.troco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.troco input {
+    width: 110px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.dinheiro .lembrete {
+    margin-top: 15px;
+}
+
 
