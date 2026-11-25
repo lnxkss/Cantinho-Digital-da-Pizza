@@ -21,36 +21,41 @@ function fecharHorarios(btnOnclick) {
 const header = document.querySelector(".header");
 
 header.innerHTML += `
+    <nav class="opcsH">
+
+        <a href="landingP.html">
+            <p id="inicio">Início</p>
+        </a>
+
+        <a href="cardapio.html">
+            <p id="cardapio">Cardápio</p>
+        </a>
+    </nav>
+
     <a href="landingP.html">
         <img src="imgs/logo.webp" alt="Cantinho da Pizza">
     </a>
 
     <nav class="opcsH">
-
-        <a href="landingP.html">
-            <p>Início</p>
-        </a>
-
-        <div class="opcsL"></div>
-
-        <a href="cardapio.html">
-            <p>Pedir</p>
-        </a>
-
-        <div class="opcsL"></div>
-
         <button type="button" onclick="verHorarios(this)">
             <p>Horários</p>
         </button>
 
-        <div class="opcsL"></div>
-
         <button type="button" onclick="abrirEndereco()">
             <p>Endereço</p>
         </button>
-
     </nav>
 `;
+
+if (window.location.pathname == "/cardapio.html") {
+    const headerP = header.querySelector("#cardapio")
+    headerP.classList.add("headerSelecionado")
+}
+
+if (window.location.pathname == "/landingP.html") {
+    const headerP = header.querySelector("#inicio")
+    headerP.classList.add("headerSelecionado")
+}
 
 const horarioH = document.querySelector(".horariosD")
 horarioH.innerHTML += `<div class="tituloH">

@@ -3,6 +3,7 @@
 }
 
 .tituloEPizzas {
+    width: 81%;
     margin-left: auto;
     display: flex;
     justify-content: center;
