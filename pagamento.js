@@ -21,7 +21,6 @@ const opcoesPagamento = document.querySelectorAll(
 );
 
 opcoesPagamento.forEach(function(opcao) {
-
     opcao.addEventListener("change", function() {
 
         document.querySelectorAll(".grupo-pagamento").forEach(function(grupo) {
@@ -54,5 +53,4 @@ function revisarPedido() {
     }
 
     alert("Forma de pagamento: " + selecionado.value);
-
 }
