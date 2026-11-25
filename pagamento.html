@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantinho da Pizza - Pagamento</title>
-    <link rel="stylesheet" href="css/pagamento.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pagamento.css">
+    
 </head>
 
 <body>
@@ -45,7 +45,6 @@
 
                 </div>
 
-
                 <div class="grupo-pagamento">
 
                     <label class="opcao">
@@ -54,40 +53,12 @@
                         <input type="radio" name="pagamento" value="Cartão de crédito">
                     </label>
 
-                    <div class="detalhes formulario" id="detalhes-credito">
-
-                        <div class="campo">
-                            <label>Número do Cartão</label>
-                            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
-                        </div>
-
-                        <div class="campo">
-                            <label>Nome do Titular</label>
-                            <input type="text" placeholder="Nome">
-                        </div>
-
-                        <div class="linha-campos">
-
-                            <div class="campo">
-                                <label>CVV</label>
-                                <input type="text" placeholder="000" maxlength="4">
-                            </div>
-
-                            <div class="campo">
-                                <label>Validade</label>
-                                <input type="text" placeholder="00/00" maxlength="5">
-                            </div>
-
-                        </div>
-
-                        <button class="confirmar" onclick="confirmarPagamento('Crédito')">
-                            CONFIRMAR
-                        </button>
-
+                    <div class="detalhes detalhes-cartao">
+                        <h3>Pagamento na entrega</h3>
+                        <p>O pagamento será realizado na entrega do pedido, utilizando cartão de crédito.</p>
                     </div>
 
                 </div>
-
 
                 <div class="grupo-pagamento">
 
@@ -97,40 +68,12 @@
                         <input type="radio" name="pagamento" value="Cartão de débito">
                     </label>
 
-                    <div class="detalhes formulario" id="detalhes-debito">
-
-                        <div class="campo">
-                            <label>Número do Cartão</label>
-                            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
-                        </div>
-
-                        <div class="campo">
-                            <label>Nome do Titular</label>
-                            <input type="text" placeholder="Nome">
-                        </div>
-
-                        <div class="linha-campos">
-
-                            <div class="campo">
-                                <label>CVV</label>
-                                <input type="text" placeholder="000" maxlength="4">
-                            </div>
-
-                            <div class="campo">
-                                <label>Validade</label>
-                                <input type="text" placeholder="00/00" maxlength="5">
-                            </div>
-
-                        </div>
-
-                        <button class="confirmar" onclick="confirmarPagamento('Débito')">
-                            CONFIRMAR
-                        </button>
-
+                    <div class="detalhes detalhes-cartao">
+                        <h3>Pagamento na entrega</h3>
+                        <p>O pagamento será realizado na entrega do pedido, utilizando cartão de débito.</p>
                     </div>
 
                 </div>
-
 
                 <div class="grupo-pagamento">
 
@@ -180,12 +123,15 @@
 
         </section>
 
+        
+
     </main>
 
     <footer></footer>
 
-    <script src="pagamento.js"></script>
     <script src="header.js"></script>
+    <script src="pagamento.js"></script>
+    
 
 </body>
 
