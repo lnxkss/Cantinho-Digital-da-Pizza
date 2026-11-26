@@ -32,3 +32,23 @@ function revisarPedido() {
 
     alert("Forma de pagamento: " + selecionado.value);
 }
+
+function abrirConfirmacao() {
+    const modal = document.getElementById("modalConfirmacao");
+
+    modal.style.display = "flex";
+}
+
+function fecharConfirmacao() {
+    const modal = document.getElementById("modalConfirmacao");
+
+    modal.style.display = "none";
+}
+
+document.getElementById("modalConfirmacao").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        fecharConfirmacao();
+    }
+
+});

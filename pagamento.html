@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantinho da Pizza - Pagamento</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pagamento.css">
-    
+
 </head>
 
 <body>
@@ -33,15 +34,22 @@
                         <input type="radio" name="pagamento" value="Pix">
                     </label>
 
+
                     <div class="detalhes" id="detalhes-pix">
 
                         <h3>QR CODE PIX</h3>
 
-                        <img src="imgs/qrcode.webp" alt="QR Code Pix" class="qrcode">
+                        <img src="https://acesso.gov.br/faq/_images/imagem_qrcode_exemplo.jpg" alt="QR Code Pix"
+                            class="qrcode">
 
                         <p>Escaneie o QR Code para realizar o pagamento.</p>
 
+                        <button type="button" class="btnComprovante" onclick="abrirConfirmacao()">
+                            ENVIAR COMPROVANTE
+                        </button>
+
                     </div>
+
 
                 </div>
 
@@ -123,15 +131,64 @@
 
         </section>
 
-        
+
 
     </main>
 
     <footer></footer>
 
+
+    <div class="confirmacao-overlay" id="modalConfirmacao">
+
+        <div class="modalConfirmacao">
+
+            <div class="areaWhatsapp">
+
+                <div class="iconeWhatsapp">
+                    <img src="imgs/whatsapp-icon.webp" alt="WhatsApp">
+                </div>
+
+                <p>
+                    Mande seu comprovante da compra no
+                    nosso Whatsapp.
+                </p>
+
+            </div>
+
+            <div class="resumoPedido">
+
+                <div class="cabecalhoResumo">
+                    <strong>RESUMO DO PEDIDO</strong>
+                    <span>|</span>
+                    <strong>R$ 59,90</strong>
+                </div>
+
+                <div class="informacoesPedido">
+                    <p>PEDIDO #1234</p>
+                    <p>PAGAMENTO VIA PIX</p>
+                </div>
+
+            </div>
+
+            <div class="agradecimento">
+                <div class="fundoMascote">
+                    <img src="imgs/mascote.webp" alt="Mascote Cantinho da Pizza">
+                </div>
+            </div>
+
+            <a href="https://api.whatsapp.com/send/?phone=554598059525&text&type=phone_number&app_absent=0"
+                target="_blank" class="btnWhatsapp">
+                Ir para o Whatsapp ➜
+            </a>
+
+        </div>
+
+    </div>
+
+
     <script src="header.js"></script>
     <script src="pagamento.js"></script>
-    
+
 
 </body>
 
